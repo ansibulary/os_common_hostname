@@ -1,0 +1,10 @@
+---
+- name: Hostname configured
+  copy:
+    dest: /etc/hostname
+    content: "{{ hostname }}"
+
+- name: Hosts known
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
